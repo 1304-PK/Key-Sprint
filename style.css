@@ -7,7 +7,7 @@
 }
 
 body{
-    /* background-image: url(assets/bg.svg); */
+    background-image: url(assets/bg.svg);
     background-color: black;
     min-height: 100vh;
     display: flex;
@@ -15,7 +15,8 @@ body{
     align-items: center;
 }
 
-#text-area{
+.text-area, .result-page{
+    background-color: black;
     border: 2px solid white;
     border-radius: 10px;
     color: white;
@@ -24,6 +25,11 @@ body{
     width: 150vmin;
     padding: 6vmin 8vmin;
     text-align: justify;
+    line-height: 8vmin;
+}
+
+.result-page{
+    line-height: normal;
 }
 
 .correct{
@@ -36,4 +42,19 @@ body{
 
 .underline{
     text-decoration: underline;
+}
+
+/* RESULT PAGE */
+
+.wpm-acc{
+    display: flex;
+    justify-content: center;
+    gap: 15vmin;
+}
+
+.other-data{
+    margin-top: 10vmin;
+    display: flex;
+    justify-content: center;
+    gap: 15vmin;
 }
