@@ -1,6 +1,6 @@
-let sentence = 'the name is john cena'
+let sentence = 'sunflower galaxy jump whisper crystal tornado velvet pancake oxygen ladder volcano bubble knight anchor mango eclipse pillow dragon zipper thunder cactus lantern marshmallow balloon'
 sentence = sentence.split('')
-const textArea = document.getElementById('text-area')
+const textArea = document.querySelector('.text-area')
 
 for (i of sentence){
   const span = document.createElement('span')
@@ -20,6 +20,8 @@ let finished = false
 
 function showResult(){
   textArea.innerHTML = ''
+  textArea.classList.remove('text-area')
+  textArea.classList.add('result-page')
 
   const timeTaken = Math.round(endTime-startTime)/1000
   const accuracy = Math.round(correct*100/sentence.length)
@@ -39,7 +41,7 @@ function showResult(){
   const charText = document.createElement('p')
   charText.textContent = `Characters: ${sentence.length}`
   const timetakenText = document.createElement('p')
-  timetakenText.textContent = timeTaken
+  timetakenText.textContent = `Time taken: ${timeTaken}s`
   otherData.append(rawText, charText, timetakenText)
 
   textArea.append(wpm_acc, otherData)
